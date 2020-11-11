@@ -89,11 +89,8 @@ def get_prime(n):
         if not isMillerRabinPassed(prime_candidate): 
             continue
         else: 
-#            print(n, "bit prime is: \n", prime_candidate)
             return prime_candidate
             break
-
-
 
     
 def gcd_(a,b): 
@@ -101,8 +98,6 @@ def gcd_(a,b):
         return a 
     else: 
         return gcd_(b,a%b)
-
-
 
 def rsa(n):    
     p = get_prime(n)
@@ -137,8 +132,6 @@ def rsa(n):
 
     return e,d,n_
 
-#We got the keys! Encryption time!
-
 def encryption(e,d,n_,data):
     
     print("\n")
@@ -161,9 +154,7 @@ def encryption(e,d,n_,data):
         pass
         
     return encoded_data, decoded_data
-    
-    
-    
+     
 def encryption_2(e,n_,data):
     start_time = time.time()
     temp_e = 1
@@ -204,7 +195,6 @@ def data_convert(data):
     return data_
 
 
-
 def data_convert_back(data):
     if isinstance(data, int):
         data = str(data)
@@ -220,6 +210,7 @@ def data_convert_back(data):
             x+=1
         print(z)
 
+        
 if __name__ == "__main__":
     n = 1024
     import time
